@@ -1,0 +1,35 @@
+#Gallery-Content{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.img-element{
+    float: left;
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.Vertical{
+    height: 585px;
+    width: auto;
+}
+
+.Left-Image{
+    margin-left: 30px;
+}
+
+.Horizontal {
+    height: 522px;
+    width: auto;
+}
+.Horizontal2 {
+    height: 526px;
+    width: auto;
+}
+.Horizontal3 {
+    height: 544px;
+    width: auto;
+}

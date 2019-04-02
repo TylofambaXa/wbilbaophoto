@@ -1,0 +1,42 @@
+.fa {
+	padding: 8px;
+	font-size: 12px;
+	width: 12px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+.fa-facebook {
+	background: #000000;
+	color: white;
+}
+
+.fa-twitter {
+	background: #000000;
+	color: white;
+}
+
+.fa-instagram {
+	background: #000000;
+	color: white;
+}
+
+.fa:hover {
+    
+    background: #c7cac8;
+    color: black;
+}
+
+#icons {
+	float: right;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+
+#icon-element{
+	margin-top: 12px;
+	margin-right: 5px;
+	letter-spacing: normal;
+}
+

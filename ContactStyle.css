@@ -1,0 +1,14 @@
+#container{
+    height: 75%;
+}
+
+#coming_soon{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+	text-transform: uppercase;	
+    letter-spacing: 3px;
+    padding-top:10%; 
+    font-size: 28;
+}

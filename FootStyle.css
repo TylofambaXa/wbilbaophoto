@@ -1,0 +1,20 @@
+#footer {
+    height: 75px;
+    background-color: black;
+    clear: both;
+    position: relative;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 28px;
+}
+
+#small-text {
+    margin-top: 30px;
+    font-size: 12px;
+    color: white;
+}
+
+#buffer{
+    height: 10px;
+}
+

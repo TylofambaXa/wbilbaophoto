@@ -1,0 +1,99 @@
+/* Bordered form */
+form {
+    border: 3px solid white;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-bottom: 50px;
+    float: left;
+}
+  
+  /* Full-width inputs */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #c7cac8;
+    box-sizing: border-box;
+    outline-color: black;
+}
+
+label {
+    font-size: 14;
+}
+
+#top_pswd {
+    margin-top: 20px;
+}
+  
+  /* Set a style for all buttons */
+button {
+    background-color: #c7cac8;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+}
+  
+  /* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+  
+  /* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #c7cac8;
+    color: black;
+}
+  
+  /* Add padding to containers */
+.container {
+    padding: 16px;
+}
+  
+  /* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+#cancel-container {
+    background-color: white;
+}
+
+div .message{
+  text-align: center;
+  color: white;
+  padding: 5px 30px 5px 30px; 
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.good {
+  background-color: green;
+}
+
+.bad {
+  background-color: red;
+}
+
+div #note{
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+  /* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+}

@@ -1,0 +1,44 @@
+#admin_container{
+    height: 75%;
+    clear: both;
+    padding-top: 5%;
+}
+
+
+.action_button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+	text-transform: uppercase;	
+  letter-spacing: 3px;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+
+  button:hover {
+    background-color: #c7cac8;
+    color: black;
+    cursor: pointer;
+  }
+
+  div .message{
+    text-align: center;
+    color: white;
+    padding: 5px 0px 5px 0px; 
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+  
+  .good {
+    background-color: green;
+  }

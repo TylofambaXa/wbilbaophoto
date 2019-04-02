@@ -1,0 +1,35 @@
+#about-container {
+    height: 310px;
+    display: block;
+    margin-bottom: 93px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+#img-container {
+    height: 300px;
+    width: auto;
+    float: right;
+}
+
+#about-img {
+    height: 300px;
+    width: auto;
+}
+
+#text-container {
+    float: left;
+    width: 550px;
+    height: 300px;
+}
+
+h1 {
+    font-size: 16;
+}
+
+.text-element {
+    float: left;
+    font-size: 14;
+    margin-bottom: 30px;
+    display: block;
+}
