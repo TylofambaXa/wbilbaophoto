@@ -25,6 +25,15 @@ class Dao {
     $q->execute();
   }
 
+  public function removeFolder ($uname) {
+    $conn = $this->getConnection();
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $saveQuery = "DELETE FROM images WHERE images.user_id LIKE (SELECT users.id FROM users WHERE users.username LIKE :usrname)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":usrname", $uname);
+    $q->execute();
+  }
+
   public function getUser ($userName) {
     $conn = $this->getConnection();
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -65,6 +74,16 @@ class Dao {
     $q->bindParam(":usrname", $username);
     $q->bindParam(":pswrd", $password);
     $q->bindParam(":email", $email);
+    $q->execute();
+  }
+
+  public function addPhoto ($username, $filepath) {
+    $conn = $this->getConnection();
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $saveQuery = "INSERT INTO images(user_id, filepath) VALUES ((SELECT users.id FROM users WHERE users.username LIKE :usrname), :filepth)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":usrname", $username);
+    $q->bindParam(":filepth", $filepath);
     $q->execute();
   }
 }

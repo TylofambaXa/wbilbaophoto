@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<?php require_once("Header.php");?>
-		<form method="post" action="add_photo_handler.php">
+		<form method="post" action="add_photo_handler.php" enctype="multipart/form-data">
 			<div class="container">
                 <label for="uname"><b>Add photos for user</b></label>
                 <table>
@@ -28,7 +28,7 @@
                         }
                     ?>
                 </table>
-                <input type="file" name="my_file[]" multiple>
+                <input type="file" name="files[]" accept="image/*" multiple>
                 
             </div>
             
