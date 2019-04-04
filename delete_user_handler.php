@@ -1,6 +1,11 @@
 <?php
     session_start();
-    print_r($_POST);
+
+    if(empty($_POST)){
+        $_SESSION['messageBad'] = "No user selected.";
+            header('Location: delete_user.php');
+            exit;
+    }
 
     function delete_directory($dirname) {
         if (is_dir($dirname))
@@ -27,8 +32,14 @@
     foreach($_POST as $user){
         $tmpUser = $dao->getUser($user);
         $user_id = $tmpUser['id'];
-
-        delete_directory(".\Images\\" . $user_id);
+        
+        if($user_id == null){
+            $_SESSION['messageBad'] = "Something went wrong.";
+            header('Location: delete_user.php');
+            exit;
+        }else{
+            delete_directory(".\Images\\" . $user_id);
+        }
         
         $dao->removeFolder($user);
         $dao->removeUser($user);
