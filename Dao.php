@@ -55,6 +55,17 @@ class Dao {
     return $AllUsers;
   }
 
+  public function getImages ($userName) {
+    $conn = $this->getConnection();
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $saveQuery = "SELECT images.filepath FROM images JOIN users ON users.id = images.user_id WHERE users.username LIKE :usrname";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":usrname", $userName);
+    $q->execute();
+    $all_images = $q->fetchAll();
+    return $all_images;
+  }
+
   public function getUserEmail ($email) {
     $conn = $this->getConnection();
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );

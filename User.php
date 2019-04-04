@@ -10,25 +10,25 @@
 		<?php require_once("Header.php");?>
 		<form method="post" action="delete_user_handler.php">
 			<div class="container">
-                <label for="uname"><b>Delete Users</b></label>
+                <label for="uname"><b>Download Photos</b></label>
                 <table>
                     <?php
                         require_once 'Dao.php';
                         $dao = new Dao();
-                        $users = $dao->getAllUsers();
-                        foreach($users as $user){
-                            $uname = $user['username'];
-                            $date = $user['datecreated'];
+						$user = $_SESSION['login_info']['usrname'];
+						$images = $dao->getImages($user);
+						
+
+                        foreach($images as $image){
+							$filepath = $image['filepath'];
 
                             echo "<tr>";
-                            echo "<td class='check'><input type='checkbox' name='" . $uname . "' value='" . $uname . "'/></td>";
-                            echo "<td class='name'>" . $uname . "</td>";
-                            echo "<td class='date'>" . $date . "</td>";
+                            echo "<td class='check'><input type='checkbox' name='" . $filepath . "' value='" . $filepath . "'/></td>";
+                            echo "<td class='name'><img class='small_image' src='." . $filepath ."'></td>";
                             echo "<tr>";
                         }
                     ?>
-                </table>
-                
+				</table>
             </div>
             
             <?php
@@ -43,8 +43,8 @@
 				?>
 
 			<div class="container" id="cancel-container">
-                <button type="button" class="cancelbtn" onclick="window.location.href = 'Admin.php';">Cancel</button>
-                <button type="submit" class="cancelbtn">Delete Selected</button>
+                <!-- <button type="button" class="cancelbtn" onclick="window.location.href = 'Admin.php';">Cancel</button> -->
+                <!-- <button type="submit" class="cancelbtn">Download Selected</button> -->
 			</div>
 		</form>
 		

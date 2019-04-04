@@ -20,3 +20,9 @@ INSERT INTO images(user_id, filepath) VALUES ((SELECT users.id FROM users WHERE 
 SELECT images.filepath FROM images JOIN users ON users.id = images.user_id WHERE users.username LIKE 'tylermathern'
 
 DELETE FROM images WHERE images.user_id LIKE (SELECT users.id FROM users WHERE users.username LIKE 'realbob')
+
+
+  private $host = "db777182820.hosting-data.io";
+  private $db = "db777182820";
+  private $user = "dbo777182820";
+  private $pass = "Ty300189!";

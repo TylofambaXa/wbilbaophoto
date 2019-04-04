@@ -29,7 +29,7 @@
 
 			<div class="container" id="cancel-container">
 				<button type="button" class="cancelbtn" onclick="window.location.href = 'Login.php';">Cancel</button>
-				<span class="psw"><a href="#">Forgot password?</a></span>
+				<!-- <span class="psw"><a href="#">Forgot password?</a></span> -->
 			</div>
 		</form>
 		

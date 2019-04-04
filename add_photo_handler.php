@@ -38,7 +38,7 @@
             if ($file["error"] > 0) {
                 throw new Exception("Error: " . $_FILES["file"]["error"]);
             } else {
-                $imagePath = "\Images\\" . $user_id . "\\" . $file["name"];
+                $imagePath = "\\Images\\" . $user_id . "\\" . $file["name"];
                 if (!move_uploaded_file($file["tmp_name"], $basePath . $imagePath)) {
                 throw new Exception("File move failed");
                 }

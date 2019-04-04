@@ -3,9 +3,9 @@
 <?php $thisPage="Login"; ?>
 <HTML>
 	<head>
-		<link rel="stylesheet" type="text/css" href="userStyle.css">
-		<link rel="shortcut icon" href="Images/favicon.png" type="image/png"/>
+        <link rel="shortcut icon" href="Images/favicon.png" type="image/png"/>
 	</head>
+		<link rel="stylesheet" type="text/css" href="add_photoStyle.css">
 	<body>
 		<?php require_once("Header.php");?>
 		<form method="post" action="add_photo_handler.php" enctype="multipart/form-data">
