@@ -19,6 +19,7 @@
                         foreach($users as $user){
                             $uname = $user['username'];
                             $date = $user['datecreated'];
+                            $uname = htmlspecialchars($uname);
 
                             echo "<tr>";
                             echo "<td class='check'><input type='radio' name='radio' value='" . $uname . "'/></td>";

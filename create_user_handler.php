@@ -33,6 +33,8 @@ if(isset($_SESSION['messageBad']) || isset($_SESSION['messageBad_Username']) || 
     exit;
 }
 
+$password = hash("sha256", $password . "salty");
+
 $dao->newUser($username, $password, $email);
 $user = $dao->getUser($username);
 // make directroy with users ID as name.

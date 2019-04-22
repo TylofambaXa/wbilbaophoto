@@ -21,6 +21,7 @@
 
                         foreach($images as $image){
 							$filepath = $image['filepath'];
+							$filepath = htmlspecialchars($filepath);
 
                             echo "<tr>";
                             echo "<td class='check'><input type='checkbox' name='" . $filepath . "' value='" . $filepath . "'/></td>";

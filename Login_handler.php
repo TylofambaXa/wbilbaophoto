@@ -17,6 +17,8 @@ $user = $dao->getUser($username);
 $pass = $user['password'];
 $admin = $user['admin'];
 
+$password = hash("sha256", $password . "salty");
+
 if($pass == $password && $admin == 1){
   $_SESSION['logged_in'] = true;
   $_SESSION['admin'] = true;
